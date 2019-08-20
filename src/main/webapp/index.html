@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <title>Exchange - Websocket</title>
+    <style>
+        .online {
+            background: green;
+            color: white;
+        }
+
+        .offline {
+            background: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="offline disconnected">Disconnected</div>
+    <div class="online connected">Connected with: <span id="user"></span></div>
+
+    <div class="disconnected">
+        <form onsubmit="return login()" name="formLogin">
+            <input name="user" placeholder="type an user" />
+            <input type="submit" value="Login" />
+        </form>
+    </div>
+
+    <div class="connected">
+        <h1>Exchange</h1>
+
+        <hr/>
+
+        <h2>Current quote</h2>
+        <div>Made by: <b id="user-quote"></b></div>
+        <div>Price: <b id="price-quote"></b></div>
+
+        <hr/>
+
+        <h2>Make your offer</h2>
+        <form onsubmit="return update()" name="formQuote">
+            <input name="price" placeholder="type a new offer" />
+            <input type="submit" value="Buy" />
+        </form>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
